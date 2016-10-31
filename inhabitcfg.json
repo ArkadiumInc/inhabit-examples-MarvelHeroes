@@ -1,0 +1,44 @@
+{
+  "main":"build/modules/marvelheroes.js",
+  "resources":"build/resources",
+  "preview":"preview.png",
+  "settings":{
+    "title":"marvelHeroes",
+    "description":"Description",
+    "badges":[
+      "MOBILE FRIENDLY",
+      "LOWERS BOUNCE",
+      "NATIVE ADS"
+    ],
+    "categories":[
+      "SomeCategory"
+    ],
+    "uniqueVersionsCount":2000,
+    "jsonSchema":{
+      "schema":{
+        "type":"object",
+        "properties":{
+          "theme": {
+            "type": "string",
+            "enum": [
+              "dark",
+              "light"
+            ]
+          }
+        }
+      },
+      "form":[
+
+      ],
+      "options":{
+
+      }
+    },
+    "defaultConfiguration":{
+      "theme":"light",
+      "delivery":"contextual"
+    },
+    "exampleContextualUrl":"https://en.wikipedia.org/wiki/Antonio_Brown"
+  }
+}
+
