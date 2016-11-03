@@ -1,0 +1,191 @@
+[
+  {
+    "id": "ModuleManager",
+    "cfg": {
+      "cdn": "/build/modules"
+    }
+  },
+  {
+    "id": "application",
+    "cfg":  {
+      "cssUrl": ["http://inhabit-widget-app-dev.azurewebsites.net/css/ark-app.css"],
+      "cacheTimeSec": "300",
+      "cdnUrl": "http://inhabit-widget-app-dev.azurewebsites.net/"
+    }
+  },
+  {
+    "id": "contentEnd",
+    "cfg": {
+      "playNextTimeOut": 60000
+    }
+  },
+  {
+    "id": "textClassificationService",
+    "cfg": {
+      "providers": [
+        {
+          "id": "indico",
+          "url": "//semantic-inhabit.as.arkadiumhosted.com/api/tags/indico"
+        },
+        {
+          "id": "alchemy",
+          "url": "//semantic-inhabit.as.arkadiumhosted.com/api/alchemy",
+          "prefetchMethods": []
+        }
+      ]
+    }
+  },
+  {
+    "id": "widget",
+    "cfg": [
+      {
+        "id": "widget",
+        "cfg": {
+          "title":"test",
+          "logoVisibility": "collapse",
+          "headerVisibility": false,
+          "secondPageUrl": "",
+          "layoutName": "listPage",
+          "_background": "#fff",
+          "presenter": "contentPresenter",
+          "rulesGroup": "inWidget"
+        }
+      },
+      {
+        "id": "accordion",
+        "cfg": {
+          "title": "Today's features",
+          "secondPageUrl": "",
+          "layoutName": "carouselPage",
+          "background": "E2F0FE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "adsPreroll",
+    "cfg": {
+      "frequency": 0,
+      "providers": [
+        {
+          "id": "adGoogleFlash",
+          "support": [
+            "pc"
+          ]
+        },
+        {
+          "id": "adGoogle",
+          "support": [
+            "tablet",
+            "phone"
+          ]
+        }
+      ],
+      "contentTypes" : ["quizark", "truefalse", "flash", "html5","interactive"]
+    }
+  },
+  {
+    "id": "adGoogle",
+    "cfg": {
+      "clientName": "arkadium.com"
+    }
+  },
+  {
+    "id": "adGoogleFlash",
+    "cfg": {
+      "clientName": "arkadium.com",
+      "timeout": 1000000
+    }
+  },
+  {
+    "id": "adStaticGoogle",
+    "cfg": {
+      "clientName": "GreatDayGames"
+    }
+  },
+  {
+    "id": "ga",
+    "cfg": {
+      "id": "UA-70970352-1",
+      "sample": 1,
+      "enabled": false
+    }
+  },
+  {
+    "id": "arkContentQuiz",
+    "cfg": {
+      "baseUrl": "//quizapi-inhabit.as.arkadiumhosted.com/"
+    }
+  },
+  {
+    "id": "googleTag",
+    "cfg": {
+      "id": "GTM-P6ZZ7X",
+      "sample": 1,
+      "enabled": true
+    }
+  },
+  {
+    "id": "appInsight",
+    "cfg": {
+      "enabled": true,
+      "instrumentationKey": "93350af6-c237-44cc-853d-c5715c40b0ad"
+    }
+  },
+  {
+    "id": "arkContentTrueFalse",
+    "cfg": {
+      "url": "//amsarkadium-a.akamaihd.net/assets/global/game/true/dc55f370-ac26-4821-80ee-205d0d56f3bc",
+      "thumb": "//amsarkadium-a.akamaihd.net/assets/global/game/true/aa41f15c-3cd5-44a6-b059-e23953135b87/true_144x144.png"
+    }
+  },
+  {
+    "id": "searchEngineService",
+    "cfg": {
+      "apiKey": "722B58884AC4B2989AE4D274FA1D6D2E",
+      "providers": [
+        {
+          "id": "arkQuiz",
+          "url": "https://inhabit.search.windows.net/indexes/arkquiz/docs/search?api-version=2015-02-28"
+        },
+        {
+          "id": "youtube",
+          "url": "https://inhabit.search.windows.net/indexes/youtube/docs/search?api-version=2015-02-28"
+        },
+        {
+          "id": "truefalse",
+          "url": "https://inhabit.search.windows.net/indexes/truefalse/docs/search?api-version=2015-02-28"
+        },
+        {
+          "id": "wirewax",
+          "url": "https://inhabit.search.windows.net/indexes/wirewax/docs/search?api-version=2015-02-28"
+        }
+      ]
+    }
+  },
+  {
+    "id":"popup",
+    "cfg":{
+      "theme":"fullscreen",
+      "customerLogo": {
+        "url": "http://arkadium.everythingzoomer.com/wp-content/themes/zoomers/images/ez_logo_beta.png",
+        "invert": true
+      }
+    }
+  },
+  {
+    "id": "contentPresenter",
+    "cfg": [
+      {
+        "id": "inWidget",
+        "cfg": {
+          "modules": [
+            {
+              "id": "marvelheroes"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
