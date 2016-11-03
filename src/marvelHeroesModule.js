@@ -31,18 +31,24 @@ marvelHeroes.moduleName = "marvelheroes";
  * @returns {Promise}
  */
 marvelHeroes.prototype.getContent = function () {
+    //first of all lets call semantic service first and get all keywords
     this.semanticContext.getEntities()
+        //if all is good let's go to next step
         .then(this.parseSemanticResultsAndGoToNextStep.bind(this))
         .fail(this.resolveContentPromise.bind(this));
     return this.contentDeferred.promise();
 };
+
 marvelHeroes.prototype.parseSemanticResultsAndGoToNextStep =function (entities) {
+    //let's filter entities by person because this who we are looking for
     this.entities = _filter(entities, {type: "Person"});
     if (this.entities.length > 0)
     {
+        //try to match preson to hero from marvel API
         this.findHero();
     }
     else {
+        //if nothing to check let's return control back to inhabit core
         this.resolveContentPromise();
     }
 };
@@ -53,10 +59,15 @@ marvelHeroes.prototype.resolveContentPromise = function(){
 
 marvelHeroes.prototype.findHero = function () {
     if (this.entities.length > 0) {
+        //let's pick first person in the list
         var entity = this.entities.shift();
+        //pick his name
         var heroName = entity.values[0];
+        //Try to find matchin hero in marvel databse
         this.marvelAPI.getHeroByName(heroName)
+            //if found let's render something
             .then(this.fillModelAndDisplay.bind(this))
+            //if no, check next one
             .fail(this.checkNext.bind(this))
     }
 };
@@ -70,8 +81,10 @@ marvelHeroes.prototype.checkNext = function () {
 };
 
 marvelHeroes.prototype.fillModelAndDisplay=function(data){
+    //fill model with data and trigger display method
     this.model = data;
     this.hasContentData = true;
+
     this.resolveContentPromise();
 };
 /**
@@ -104,8 +117,8 @@ marvelHeroes.prototype.hasContent = function () {
  * @return {string}
  */
 marvelHeroes.prototype.display = function () {
+    //compile html from the model and return result
     var compiledTemplate = this.handlebars.compile(marvelHeroesView);
-
     return compiledTemplate(this.model);
 };
 
