@@ -19,8 +19,12 @@ var MarvelAPI = function ($) {
 };
 ```
 
-###Let's start
+###Now we can start
 ```
+//install packages
 npm install
+
+//start server
+npm start
 ```
 
