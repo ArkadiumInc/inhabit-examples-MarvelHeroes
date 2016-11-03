@@ -39,4 +39,9 @@ jspm_packages
 #idea files
 .idea
 
+#build
+build
+!doc/build
+
+
 

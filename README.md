@@ -27,4 +27,6 @@ npm install
 //start server
 npm start
 ```
+As result you should be able to see something like this: [Marvel heroes example](https://arkadiuminc.github.io/inhabit-examples-MarvelHeroes/)
+
 

@@ -15,7 +15,6 @@ var _filter = require('lodash/filter');
 var marvelHeroes = function (configuration, dependencies) {
     InhabitModuleBase.prototype.constructor.call(this, configuration, dependencies);
     this.configuration = dependencies.$.extend(true, {}, DefaultConfiguration);
-
     this.semanticContext = new SemanticContext(this.textClassificationService);
     this.marvelAPI = new MarvelAPI(this.$);
     this.contentDeferred = this.$.Deferred();
