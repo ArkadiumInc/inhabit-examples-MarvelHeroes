@@ -8,9 +8,9 @@
   {
     "id": "application",
     "cfg":  {
-      "cssUrl": ["http://inhabit-widget-app-dev.azurewebsites.net/css/ark-app.css"],
+      "cssUrl": ["/"],
       "cacheTimeSec": "300",
-      "cdnUrl": "http://inhabit-widget-app-dev.azurewebsites.net/"
+      "cdnUrl": "/"
     }
   },
   {
