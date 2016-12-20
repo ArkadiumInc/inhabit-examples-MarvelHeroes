@@ -9,7 +9,7 @@ var path = require('path');
 
 module.exports = {
     entry: 'marvelHeroesModule',
-    output: { filename: inhabitcfg.main },
+    output: { filename: 'marvelheroes.js' },
     module: {
         loaders: [
             { test: /\.hbs$/,  loader: 'raw' },
@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: 'src/resources', to: 'build/resources' }
+            { from: 'src/resources', to: 'build' }
         ])
     ],
     resolve: {

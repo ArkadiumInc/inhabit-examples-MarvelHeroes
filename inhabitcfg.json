@@ -1,7 +1,6 @@
 {
-  "main":"build/modules/marvelheroes.js",
-  "resources":"build/resources",
-  "preview":"preview.png",
+  "main":"build/marvelheroes.js",
+  "preview":"preview.jpg",
   "settings":{
     "title":"marvelHeroes",
     "description":"Description",

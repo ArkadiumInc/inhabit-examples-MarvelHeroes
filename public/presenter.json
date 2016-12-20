@@ -2,7 +2,7 @@
   {
     "id": "ModuleManager",
     "cfg": {
-      "cdn": "/build/modules"
+      "cdn": "."
     }
   },
   {
